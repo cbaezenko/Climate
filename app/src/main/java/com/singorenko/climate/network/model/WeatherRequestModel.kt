@@ -1,7 +1,5 @@
 package com.singorenko.climate.network.model
 
-import android.os.Parcel
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 /*
@@ -19,5 +17,6 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class WeatherRequestModel (
 
 	@SerializedName("location") val location : Location,
-	@SerializedName("current") val current : Current
+	@SerializedName("current") val current : Current,
+	@SerializedName("forecast") val forecast : Forecast
 )

@@ -14,29 +14,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Current (
+data class Day (
 
-	@SerializedName("last_updated_epoch") val last_updated_epoch : Int,
-	@SerializedName("last_updated") val last_updated : String,
-	@SerializedName("temp_c") val temp_c : Int,
-	@SerializedName("temp_f") val temp_f : Double,
-	@SerializedName("is_day") val is_day : Int,
+	@SerializedName("maxtemp_c") val maxtemp_c : Double,
+	@SerializedName("maxtemp_f") val maxtemp_f : Double,
+	@SerializedName("mintemp_c") val mintemp_c : Double,
+	@SerializedName("mintemp_f") val mintemp_f : Double,
+	@SerializedName("avgtemp_c") val avgtemp_c : Double,
+	@SerializedName("avgtemp_f") val avgtemp_f : Double,
+	@SerializedName("maxwind_mph") val maxwind_mph : Double,
+	@SerializedName("maxwind_kph") val maxwind_kph : Double,
+	@SerializedName("totalprecip_mm") val totalprecip_mm : Double,
+	@SerializedName("totalprecip_in") val totalprecip_in : Double,
+	@SerializedName("avgvis_km") val avgvis_km : Double,
+	@SerializedName("avgvis_miles") val avgvis_miles : Int,
+	@SerializedName("avghumidity") val avghumidity : Int,
 	@SerializedName("condition") val condition : Condition,
-	@SerializedName("wind_mph") val wind_mph : Double,
-	@SerializedName("wind_kph") val wind_kph : Double,
-	@SerializedName("wind_degree") val wind_degree : Int,
-	@SerializedName("wind_dir") val wind_dir : String,
-	@SerializedName("pressure_mb") val pressure_mb : Int,
-	@SerializedName("pressure_in") val pressure_in : Double,
-	@SerializedName("precip_mm") val precip_mm : Double,
-	@SerializedName("precip_in") val precip_in : Double,
-	@SerializedName("humidity") val humidity : Int,
-	@SerializedName("cloud") val cloud : Int,
-	@SerializedName("feelslike_c") val feelslike_c : Double,
-	@SerializedName("feelslike_f") val feelslike_f : Double,
-	@SerializedName("vis_km") val vis_km : Int,
-	@SerializedName("vis_miles") val vis_miles : Int,
-	@SerializedName("uv") val uv : Int,
-	@SerializedName("gust_mph") val gust_mph : Double,
-	@SerializedName("gust_kph") val gust_kph : Double
+	@SerializedName("uv") val uv : Double
 )

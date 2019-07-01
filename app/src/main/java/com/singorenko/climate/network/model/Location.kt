@@ -1,4 +1,5 @@
 package com.singorenko.climate.network.model
+
 import com.google.gson.annotations.SerializedName
 
 /*

@@ -6,7 +6,7 @@ import com.singorenko.climate.network.remote.RetrofitClient
 class ApiUtils {
     companion object {
         fun getApiService(): ApiService {
-            val baseUrl = "http://api.apixu.com/v1/current.json"
+            val baseUrl = "https://api.apixu.com/v1/"
             return RetrofitClient.create(baseUrl).create(ApiService::class.java)
         }
     }

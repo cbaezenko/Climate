@@ -1,165 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+                                                   android:layout_height="match_parent"
+android:id="@+id/main_city_constraint_layout">
 
+    <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/iv_main_city_image_background"
+            app:layout_constraintTop_toTopOf="@+id/tv_main_city_temp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop" app:layout_constraintStart_toEndOf="@+id/tv_main_city_temp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_main_city_temp" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
-            android:text="30 C"
+            android:text="-10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/tv_main_city_temp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.100000024"
             android:textSize="64dp"/>
-    <TextView
-            android:text="15 C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
-            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:layout_marginTop="16dp" android:textSize="18sp"/>
-    <TextView
-            android:text="35 C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            app:layout_constraintTop_toTopOf="@+id/textView4" app:layout_constraintBottom_toBottomOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:textSize="18sp"/>
     <androidx.constraintlayout.widget.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline" app:layout_constraintGuide_percent="0.5"/>
     <TextView
-            android:text="Ciudad"
+            android:text="Moscu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/tv_main_city_name" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.498" android:textSize="30sp" android:layout_marginTop="64dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+            app:layout_constraintHorizontal_bias="0.498" android:textSize="30sp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main_city_condition" android:fontFamily="@font/propaganda"/>
     <TextView
-            android:text="ultima actualizacion"
+            android:text="Last update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView7" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintTop_toBottomOf="@+id/tv_main_city_name"
             android:layout_marginTop="24dp"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8"
+            android:id="@+id/tv_main_city_last_update"
             app:layout_constraintTop_toTopOf="@+id/textView7" app:layout_constraintBottom_toBottomOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"/>
+    <!--<TextView-->
+            <!--android:text="Tomorrow"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView9" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginStart="20dp" app:layout_constraintTop_toTopOf="parent"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.644"/>-->
+    <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:id="@+id/iv_condition_forecast_tomorrow"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView9" app:layout_constraintBottom_toBottomOf="@+id/textView9"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="@+id/guideline"/>-->
     <TextView
-            android:text="Tomorrow"
+            android:text="lluvia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.644"/>
-    <TextView
-            android:text="condicion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView10"
-            app:layout_constraintTop_toTopOf="@+id/textView9" app:layout_constraintBottom_toBottomOf="@+id/textView9"
-            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="@+id/guideline"/>
-    <TextView
-            android:text="condicion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView11" app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2" app:layout_constraintTop_toBottomOf="@+id/textView2"
-            android:textSize="18sp" android:layout_marginTop="16dp"/>
-    <TextView
-            android:text="15 C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView10"
-            app:layout_constraintBottom_toBottomOf="@+id/textView10" android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/textView13" android:layout_marginRight="16dp"/>
-    <TextView
-            android:text="20 C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/textView12"
-            app:layout_constraintBottom_toBottomOf="@+id/textView12"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView14" app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintEnd_toEndOf="@+id/textView9" app:layout_constraintTop_toBottomOf="@+id/textView9"
-            android:layout_marginTop="32dp"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView15" app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintEnd_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toTopOf="@+id/textView14"
-            app:layout_constraintBottom_toBottomOf="@+id/textView14"/>
-    <TextView
-            android:text="555"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView16" app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"/>
-    <TextView
-            android:text="102"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView17" app:layout_constraintStart_toStartOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/textView16"
-            app:layout_constraintBottom_toBottomOf="@+id/textView16"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView18" app:layout_constraintEnd_toEndOf="@+id/textView14"
-            app:layout_constraintStart_toStartOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" android:layout_marginTop="32dp"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView19" app:layout_constraintStart_toStartOf="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="@+id/textView15"
-            app:layout_constraintTop_toTopOf="@+id/textView18"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"/>
-    <TextView
-            android:text="15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView20" app:layout_constraintStart_toStartOf="@+id/textView16"
-            app:layout_constraintTop_toTopOf="@+id/textView19"
-            app:layout_constraintBottom_toBottomOf="@+id/textView19"
-            app:layout_constraintEnd_toEndOf="@+id/textView16"/>
-    <TextView
-            android:text="25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView21" app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintEnd_toEndOf="@+id/textView17" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintTop_toTopOf="@+id/textView20"
-            app:layout_constraintBottom_toBottomOf="@+id/textView20"/>
+            android:id="@+id/tv_main_city_condition" app:layout_constraintEnd_toEndOf="@+id/tv_main_city_temp"
+            app:layout_constraintStart_toStartOf="@+id/tv_main_city_temp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main_city_temp"
+            android:textSize="18sp" android:layout_marginTop="16dp" android:fontFamily="@font/propaganda"/>
+    <!--<TextView-->
+            <!--android:text="15 C"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView12"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/iv_condition_forecast_tomorrow"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/iv_condition_forecast_tomorrow" android:layout_marginEnd="16dp"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/textView13" android:layout_marginRight="16dp"/>-->
+    <!--<TextView-->
+            <!--android:text="20 C"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView13"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView12"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView12"-->
+            <!--app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginRight="16dp"/>-->
+    <!--<TextView-->
+            <!--android:text="TextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView14" app:layout_constraintStart_toStartOf="@+id/textView9"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/textView9" app:layout_constraintTop_toBottomOf="@+id/textView9"-->
+            <!--android:layout_marginTop="32dp"/>-->
+    <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:id="@+id/iv_condition_forecast_2" app:layout_constraintStart_toStartOf="@+id/iv_condition_forecast_tomorrow"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/iv_condition_forecast_tomorrow"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView14"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView14"/>-->
+    <!--<TextView-->
+            <!--android:text="555"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView16" app:layout_constraintStart_toStartOf="@+id/textView12"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/textView12"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/iv_condition_forecast_2"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/iv_condition_forecast_2"/>-->
+    <!--<TextView-->
+            <!--android:text="102"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView17" app:layout_constraintStart_toStartOf="@+id/textView13"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/textView13"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView16"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView16"/>-->
+    <!--<TextView-->
+            <!--android:text="TextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView18" app:layout_constraintEnd_toEndOf="@+id/textView14"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/textView14"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textView14" android:layout_marginTop="32dp"/>-->
+    <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:id="@+id/iv_condition_forecast_3" app:layout_constraintStart_toStartOf="@+id/iv_condition_forecast_2"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/iv_condition_forecast_2"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView18"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView18"/>-->
+    <!--<TextView-->
+            <!--android:text="15"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView20" app:layout_constraintStart_toStartOf="@+id/textView16"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/iv_condition_forecast_3"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/iv_condition_forecast_3"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/textView16"/>-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--android:text="25"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textView21" app:layout_constraintStart_toStartOf="@+id/textView17"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/textView17" android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView20"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView20"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewForecast"
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main_city_last_update"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
