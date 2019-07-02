@@ -18,7 +18,7 @@ data class Current (
 
 	@SerializedName("last_updated_epoch") val last_updated_epoch : Int,
 	@SerializedName("last_updated") val last_updated : String,
-	@SerializedName("temp_c") val temp_c : Int,
+	@SerializedName("temp_c") val temp_c : Double,
 	@SerializedName("temp_f") val temp_f : Double,
 	@SerializedName("is_day") val is_day : Int,
 	@SerializedName("condition") val condition : Condition,

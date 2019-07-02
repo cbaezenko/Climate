@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.singorenko.climate.R
 import com.singorenko.climate.network.model.WeatherRequestModel
-import kotlinx.android.synthetic.main.main_city_layout.*
 
 class ForecastRecyclerViewAdapter(private val weatherRequestModel: WeatherRequestModel): RecyclerView.Adapter<ForecastRecyclerViewAdapter.RecyclerViewHolder>() {
 
@@ -25,7 +24,7 @@ class ForecastRecyclerViewAdapter(private val weatherRequestModel: WeatherReques
     }
 
     override fun getItemCount(): Int {
-        return weatherRequestModel.forecast.forecastday.size
+        return (weatherRequestModel.forecast.forecastday.size - 1)
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
@@ -52,7 +51,6 @@ class ForecastRecyclerViewAdapter(private val weatherRequestModel: WeatherReques
         }
     }
 
-
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
        val tvForecastDay: TextView = itemView.findViewById(R.id.tv_forecast_day)
@@ -60,5 +58,4 @@ class ForecastRecyclerViewAdapter(private val weatherRequestModel: WeatherReques
        val tvForecastTempMax: TextView = itemView.findViewById(R.id.tv_forecast_temp_max)
        val ivForecastImage: ImageView = itemView.findViewById(R.id.iv_forecast_image)
     }
-
 }

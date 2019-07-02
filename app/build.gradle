@@ -23,6 +23,10 @@ android {
             it.buildConfigField('String','apiKey', apiKey)
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {

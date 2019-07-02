@@ -8,7 +8,7 @@
         tools:context=".view.MainCityFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerViewCityList"
             android:layout_width="0dp"
             android:layout_height="0dp" android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -25,12 +25,13 @@
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintBottom_toTopOf="@+id/textView" android:layout_marginBottom="8dp"/>
     <TextView
-            android:text="Добавить"
+            android:textSize="12dp"
+            android:fontFamily="@font/propaganda"
+            android:text="Add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="16dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

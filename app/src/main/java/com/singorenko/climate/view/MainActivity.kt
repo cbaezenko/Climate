@@ -6,8 +6,11 @@ import com.google.android.material.tabs.TabLayout
 import com.singorenko.climate.R
 import com.singorenko.climate.adapter.MyPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+//import com.singorenko.climate.databinding.MainCityLayoutBinding
 
 class MainActivity : AppCompatActivity() {
+
+//    private lateinit var binding: MainCityLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
