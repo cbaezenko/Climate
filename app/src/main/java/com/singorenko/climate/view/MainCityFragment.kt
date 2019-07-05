@@ -17,11 +17,29 @@ import com.singorenko.climate.view.adapter.ForecastRecyclerViewAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import android.app.ActivityManager
+import android.content.Context
+import android.content.Context.ACTIVITY_SERVICE
+import android.content.pm.PackageManager
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.work.OneTimeWorkRequest
+import androidx.work.PeriodicWorkRequest
+import androidx.work.WorkManager
+import com.singorenko.climate.UploadWorker
+import java.util.concurrent.TimeUnit
+import androidx.core.view.accessibility.AccessibilityEventCompat.setAction
+import com.singorenko.climate.MyService
+import android.content.Intent
+
+
+
 
 class MainCityFragment : Fragment() {
 
     private lateinit var binding: MainCityLayoutBinding
     private var disposable: Disposable? = null
+
+    private val uploadWorkRequest: UploadWorker? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +74,30 @@ class MainCityFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         weatherRequest("Moscow")
+
+        val startIntent = Intent(context, MyService::class.java)
+        startIntent.action = "com.singorenko.climate.action_name"
+        context!!.startService(startIntent)
+
+//        val periodicWorkRequest = PeriodicWorkRequest.Builder(UploadWorker::class.java,
+//            10,
+//            TimeUnit.SECONDS, 5, TimeUnit.SECONDS).build()
+//
+//        WorkManager.getInstance().enqueue(periodicWorkRequest)
+
+//        WorkManager.getInstance().enqueue(PeriodicWorkRequest.Builder(UploadWorker::class.java,
+//            16, TimeUnit.MINUTES).build())
+
+        WorkManager.getInstance().enqueue(PeriodicWorkRequest.Builder(UploadWorker::class.java,
+            PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS, TimeUnit.MILLISECONDS).build())
+
+//        if (Helper.isAppRunning(this!!.context!!, "com.facebook.orca")) {
+//            // App is running
+//            Log.d("TAG","com.facebook.messenger is running !!!!")
+//        } else {
+//            // App is not running
+//            Log.d("TAG","com.facebook.messenger is NOT running !!!!")
+//        }
     }
 
     override fun onPause() {
@@ -85,4 +127,21 @@ class MainCityFragment : Fragment() {
             binding.tvMainCityName.text = (weatherCity.location.name)
         }
     }
+
+//    object Helper {
+//        fun isAppRunning(context: Context, packageName: String): Boolean {
+//            val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+//            val procInfos: List<ActivityManager.RunningAppProcessInfo> = activityManager.runningAppProcesses
+//            if (procInfos != null) {
+//                for (processInfo in procInfos) {
+//                    Log.d("TAG", "la aplicacion que esta funcionando es "+
+//                            processInfo.processName)
+//                    if (processInfo.processName == packageName) {
+//                        return true
+//                    }
+//                }
+//            }
+//            return false
+//        }
+//    }
 }

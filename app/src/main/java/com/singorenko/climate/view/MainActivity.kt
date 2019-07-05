@@ -1,7 +1,11 @@
 package com.singorenko.climate.view
 
+import android.app.ActivityManager
+import android.content.Context
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.tabs.TabLayout
 import com.singorenko.climate.R
 import com.singorenko.climate.adapter.MyPagerAdapter
@@ -16,8 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        initTabLayout()
+//        initViewPager()
+    }
+
+    override fun onResume() {
+        super.onResume()
         initTabLayout()
         initViewPager()
+
     }
 
     private fun initTabLayout() {
